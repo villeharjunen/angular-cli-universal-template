@@ -7,13 +7,24 @@ const routes: Routes = [
         loadChildren: './home/home.module#HomeModule'
     },
     {
-        path: 'asd',
-        loadChildren: './asd/asd.module#AsdModule'
+        path: 'posts',
+        loadChildren: './posts/posts.module#PostsModule'
+    },
+    {
+        path: 'careers',
+        loadChildren: './careers/careers.module#CareersModule'
     }
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule]
+    imports: [
+        RouterModule.forRoot(
+            routes,
+            // { enableTracing: true } // uncomment for router debug
+        )
+    ],
+    exports: [
+        RouterModule
+    ]
 })
 export class AppRoutingModule { }

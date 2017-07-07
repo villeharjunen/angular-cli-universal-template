@@ -13,7 +13,7 @@ enableProdMode();
 
 const app = express();
 
-let template = readFileSync(join(__dirname, 'index.html')).toString();
+let template = readFileSync(join(__dirname, "..", 'index.html')).toString();
 
 app.engine('html', (_, options, callback) => {
     const opts = { document: template, url: options.req.url };
@@ -29,7 +29,7 @@ app.get("/api/lols", function(req, res) {
     res.send("lols");
 });
 
-app.get('*.*', express.static(join(__dirname)));
+app.get('*.*', express.static(join(__dirname, "..")));
 
 app.get('*', (req, res) => {
     console.log("A client connected.")

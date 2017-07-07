@@ -8,19 +8,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { NavigationComponent } from './components/navigation/navigation.component';
+import { WordpressService } from './services/wordpress.service';
 
 @NgModule({
     imports: [
         BrowserModule.withServerTransition({ appId: 'application-name' }),
         FormsModule,
         HttpModule,
-        AppRoutingModule
+        AppRoutingModule,
     ],
     declarations: [
         AppComponent,
-        NavigationComponent
+        NavigationComponent,
     ],
-    providers: [],
+    providers: [
+        WordpressService,
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

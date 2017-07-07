@@ -1,0 +1,14 @@
+<div id="loading" *ngIf="!careers">
+    <p>
+        Loading careers...
+    </p>
+</div>
+<div id="careers" *ngIf="careers">
+    <ul>
+        <li *ngFor="let career of careers">
+            <a routerLink="{{career.slug}}">
+                {{career.title.rendered}}
+            </a>
+        </li>
+    </ul>
+</div>
