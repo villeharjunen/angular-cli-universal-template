@@ -1,13 +1,13 @@
 {
-    "watch": ["src/server.ts"],
+    "watch": [
+        "src/dev-server.ts",
+        "src/rest"
+    ],
     "ext": "ts",
     "ignore": [
         "src/main.ts",
         "src/polyfills.ts"
     ],
-    "exec": "./node_modules/.bin/ts-node ./src/server.ts",
-    "events": {
-        "start": "./node_modules/.bin/ngc"
-    },
-    "delay": 200
+    "exec": "./node_modules/.bin/ts-node ./src/server.dev.ts",
+    "delay": 350
 }

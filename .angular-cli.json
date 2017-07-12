@@ -4,11 +4,10 @@
         "name": "angular-cli-universal-template"
     },
     "apps": [{
-        "root": "src",
+        "root": "src/client",
         "outDir": "dist",
         "assets": [
-            "assets",
-            "favicon.*"
+            "assets"
         ],
         "index": "index.html",
         "main": "main.ts",
@@ -16,7 +15,7 @@
         "tsconfig": "tsconfig.app.json",
         "prefix": "app",
         "styles": [
-            "styles.scss"
+            "styles/styles.scss"
         ],
         "scripts": [],
         "environmentSource": "environments/environment.ts",
@@ -26,7 +25,7 @@
         }
     }],
     "lint": [{
-        "project": "src/tsconfig.app.json"
+        "project": "tsconfig.app.json"
     }],
     "defaults": {
         "styleExt": "scss",

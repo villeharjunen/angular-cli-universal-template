@@ -1,8 +1,8 @@
 {
     "compileOnSave": true,
     "compilerOptions": {
-        "outDir": "dist",
-        "baseUrl": "src/server",
+        "outDir": "dist/",
+        "baseUrl": "src/",
         "sourceMap": true,
         "declaration": false,
         "moduleResolution": "node",
@@ -18,7 +18,7 @@
         ]
     },
     "angularCompilerOptions": {
-        "genDir": "src/server/ngfactory",
-        "entryModule": "src/server/app/app.module#AppModule"
+        "genDir": "src/client/.ngfactory",
+        "entryModule": "src/client/app/app.module#AppModule"
     }
 }
